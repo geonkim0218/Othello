@@ -4,8 +4,8 @@
 CPP      = g++.exe
 CC       = gcc.exe
 WINDRES  = windres.exe
-OBJ      = Othello/main.o
-LINKOBJ  = Othello/main.o
+OBJ      = checkFlip.o isGameEnd.o main.o print_othello.o init_othello.o check_result.o
+LINKOBJ  = checkFlip.o isGameEnd.o main.o print_othello.o init_othello.o check_result.o
 LIBS     = -L"C:/Users/김건/Desktop/숙명여자대학교/1-2/프로그래밍 기초/Dev-Cpp/MinGW64/lib" -L"C:/Users/김건/Desktop/숙명여자대학교/1-2/프로그래밍 기초/Dev-Cpp/MinGW64/x86_64-w64-mingw32/lib" -static-libgcc
 INCS     = -I"C:/Users/김건/Desktop/숙명여자대학교/1-2/프로그래밍 기초/Dev-Cpp/MinGW64/include" -I"C:/Users/김건/Desktop/숙명여자대학교/1-2/프로그래밍 기초/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include" -I"C:/Users/김건/Desktop/숙명여자대학교/1-2/프로그래밍 기초/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include"
 CXXINCS  = -I"C:/Users/김건/Desktop/숙명여자대학교/1-2/프로그래밍 기초/Dev-Cpp/MinGW64/include" -I"C:/Users/김건/Desktop/숙명여자대학교/1-2/프로그래밍 기초/Dev-Cpp/MinGW64/x86_64-w64-mingw32/include" -I"C:/Users/김건/Desktop/숙명여자대학교/1-2/프로그래밍 기초/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include" -I"C:/Users/김건/Desktop/숙명여자대학교/1-2/프로그래밍 기초/Dev-Cpp/MinGW64/lib/gcc/x86_64-w64-mingw32/4.9.2/include/c++"
@@ -24,5 +24,20 @@ clean: clean-custom
 $(BIN): $(OBJ)
 	$(CC) $(LINKOBJ) -o $(BIN) $(LIBS)
 
-Othello/main.o: Othello/main.c
-	$(CC) -c Othello/main.c -o Othello/main.o $(CFLAGS)
+checkFlip.o: checkFlip.c
+	$(CC) -c checkFlip.c -o checkFlip.o $(CFLAGS)
+
+isGameEnd.o: isGameEnd.c
+	$(CC) -c isGameEnd.c -o isGameEnd.o $(CFLAGS)
+
+main.o: main.c
+	$(CC) -c main.c -o main.o $(CFLAGS)
+
+print_othello.o: print_othello.c
+	$(CC) -c print_othello.c -o print_othello.o $(CFLAGS)
+
+init_othello.o: init_othello.c
+	$(CC) -c init_othello.c -o init_othello.o $(CFLAGS)
+
+check_result.o: check_result.c
+	$(CC) -c check_result.c -o check_result.o $(CFLAGS)
