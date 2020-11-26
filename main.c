@@ -43,7 +43,7 @@ void main(int argc, char *argv[]) {
 				//≈œ πŸ≤ﬁ	
 				printf("put a new black othello : ");
 				scanf("%d %d", &a, &b); 
-				}
+			}
 		}
 				
 		else
