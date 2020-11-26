@@ -19,9 +19,9 @@ void main(int argc, char *argv[]) {
 	
 	init_othello(gameboard);//게임 초기화
 	
-	while (isGameEnd() > 0) {//game 종료 조건 확인
+	while (isGameEnd(gameboard) > 0) {//game 종료 조건 확인
 		
-		if (turnpass() != 0) {// 배치가 가능한 칸이 있는지 확인) 
+		if (turnpass() == 0) {// 배치가 가능한 칸이 있는지 확인) 
 			printf("Turn pass!\n");
 			continue; //두 player 모두 배치가 불가능하면 반복문을 빠져나가야함
 		}
