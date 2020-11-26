@@ -19,7 +19,7 @@ int checkFlip(int startX, int startY, int color) {
 				break;
 			}   //돌의 위치가 게임판을 넘어가는 경우, 멈춤 
 			
-			if (gameboard[startX+dx[i]*j][startY+dy[i]*j] == gameboard[startX][startY]) {
+			if (gameboard[startX+dx[i]*j][startY+dy[i]*j] = gameboard[startX][startY]) {
 				return 1;
 				break;
 			}   //입력받은 시작위치(a,b)에서 돌을 8개 방향으로 이동시키면서 동일한 색의 돌을 만나는 경우, 1 반환  

@@ -32,7 +32,8 @@ void main(int argc, char *argv[]) {
 			
 		if (checkFlip(a, b, white) == 1) { //입력좌표가 적절한지 체크(이웃돌이 존재하는가)
 			
-			
+			if(checkFlip(a, b, white) == 0) { //뒤집을 수 있는, 기존에 배치된 알이 존재하는가 
+				//뒤집기 시도 
 				 
 				printf("*flip result*\n");
 				printf("E: W: S: N: NW: NE: SW: SE: \n");//어느 방향에서 뒤집히는 결과가 출력되는가 
@@ -42,7 +43,7 @@ void main(int argc, char *argv[]) {
 				//턴 바꿈	
 				printf("put a new black othello : ");
 				scanf("%d %d", &a, &b); 
-				
+				}
 		}
 				
 		else
