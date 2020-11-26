@@ -12,10 +12,10 @@ extern int turnpass();
 
 void main(int argc, char *argv[]) {
 	
-	int a, b; //필요한 변수들 정의-> a: 가로, b:세로 좌표
+	int a, b; //필요한 변수들 정의-> 새로 입력받은 돌의 위치 a: 가로, b:세로 좌표
 	int whitestone=2; //반복문을 돌 때마다 바뀌는 흰 돌의 개수 
 	int blackstone=2; //반복문을 돌 때마다 바뀌는 검은 돌의 개수 
-	int white, black; //coloer
+	int white, black; //color
 	
 	init_othello(gameboard);//게임 초기화
 	
@@ -34,8 +34,8 @@ void main(int argc, char *argv[]) {
 			
 			if(checkFlip(a, b, white) == 0) { //뒤집을 수 있는, 기존에 배치된 알이 존재하는가 
 				//뒤집기 시도 
-				gameboard[a][b]=  
-
+				gameboard[a][b]='O' 
+				  
 				printf("*flip result*\n");
 				printf("E: W: S: N: NW: NE: SW: SE: \n");//어느 방향에서 뒤집히는 결과가 출력되는가 
 				printf(" white has flipped ? othellos!\n");//이번 turn에서 총 몇개 뒤집었는지 출력

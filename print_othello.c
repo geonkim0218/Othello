@@ -24,15 +24,14 @@ void print_othello(int a, int b, int color, int m[N][N]) {
 				if (color='white') { 
 					m[a][b]='O';
 				}
-				if (color='black') {
+				else if (color='black') {
 					m[a][b]='X';
 				}
 			}
-			
-			printf("i|"<m[i][0]<"|"<m[i][1]<"|"<m[i][2]<"|"<m[i][3]<"|"<m[i][4]<"|"<m[i][5]<"|");
-			printf("%c", m[i][j]);
-			printf("天天天天天天天\n");
 		}	
+		printf("%d|%c|%c|%c|%c|%c|%c|\n", i, m[i][0], m[i][1], m[i][2], m[i][3], m[i][4], m[i][5]);
+		printf("天天天天天天天\n");
 	}
+	
 	return 0;
 }

@@ -19,7 +19,7 @@ char init_othello(char a[N][N]) {
 			a[3][3]='O'; //�� 給 蟾晦寡纂 
 		}
 		printf("%d|%c|%c|%c|%c|%c|%c|\n", i, a[i][0], a[i][1], a[i][2], a[i][3], a[i][4], a[i][5]);
-			printf("天天天天天天天\n");			
+		printf("天天天天天天天\n");			
 	}
 	
 	return 0;

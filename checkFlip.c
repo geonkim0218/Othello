@@ -8,13 +8,13 @@ int checkFlip(int startX, int startY, int color) {
 	int dx[8]={-1,-1,0,1,1,1,0,-1}; //북쪽부터 시계방향으로 8개 방향을 -1,1로 표시 
 	int dy[8]={0,1,1,1,0,-1,-1,-1}; //북쪽부터 시계방향으로 8개 방향을 -1,1로 표시 
 
-	if (color == 'white')
+	if (color = 'white')
 		gameboard[startX][startY]='O';	//흰 돌은 O로 
-	else 
+	else if (color = 'black')
 		gameboard[startX][startY]='X'; //검은 돌은 X로 
 	
 	for (i=0;i<8;i++) { //8가지 방향에 대해 돌의 배치 상황을 확인 
-		for (j=1;j<7;j++) {
+		for (j=1;j<6;j++) {
 			if ((startX+dx[i]*j<0) || (startY+dy[i]*j<0) || (startX+dx[i]*j>6) || (startY+dy[i]*j>6)) { 
 				break;
 			}   //돌의 위치가 게임판을 넘어가는 경우, 멈춤 
