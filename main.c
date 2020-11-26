@@ -21,7 +21,7 @@ void main(int argc, char *argv[]) {
 	
 	while (isGameEnd(gameboard) > 0) {//game 종료 조건 확인
 		
-		if (turnpass() == 0) {// 배치가 가능한 칸이 있는지 확인) 
+		if (turnpass() != 1) {// 배치가 가능한 칸이 있는지 확인) 
 			printf("Turn pass!\n");
 			continue; //두 player 모두 배치가 불가능하면 반복문을 빠져나가야함
 		}
@@ -32,10 +32,8 @@ void main(int argc, char *argv[]) {
 			
 		if (checkFlip(a, b, white) == 1) { //입력좌표가 적절한지 체크(이웃돌이 존재하는가)
 			
-			if(checkFlip(a, b, white) == 0) { //뒤집을 수 있는, 기존에 배치된 알이 존재하는가 
-				//뒤집기 시도 
-				gameboard[a][b]='O' 
-				  
+			
+				 
 				printf("*flip result*\n");
 				printf("E: W: S: N: NW: NE: SW: SE: \n");//어느 방향에서 뒤집히는 결과가 출력되는가 
 				printf(" white has flipped ? othellos!\n");//이번 turn에서 총 몇개 뒤집었는지 출력
@@ -44,7 +42,7 @@ void main(int argc, char *argv[]) {
 				//턴 바꿈	
 				printf("put a new black othello : ");
 				scanf("%d %d", &a, &b); 
-				}
+				
 		}
 				
 		else
